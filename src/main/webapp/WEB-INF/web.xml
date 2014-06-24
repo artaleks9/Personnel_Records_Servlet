@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <filter>
+        <filter-name>CheckFilter</filter-name>
+        <filter-class>com.hometask.webinterface.CheckFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CheckFilter</filter-name>
+        <url-pattern>/addemployee</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>ShowEmployees</servlet-name>
+        <servlet-class>com.hometask.webinterface.ShowEmployees</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowEmployees</servlet-name>
+        <url-pattern>/showemployees</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddEmployee</servlet-name>
+        <servlet-class>com.hometask.webinterface.AddEmployee</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmployee</servlet-name>
+        <url-pattern>/addemployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteEmployee</servlet-name>
+        <servlet-class>com.hometask.webinterface.DeleteEmployee</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteEmployee</servlet-name>
+        <url-pattern>/deleteemployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SortEmployees</servlet-name>
+        <servlet-class>com.hometask.webinterface.SortEmployees</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortEmployees</servlet-name>
+        <url-pattern>/sortemployees</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GenerateEmployees</servlet-name>
+        <servlet-class>com.hometask.webinterface.GenerateEmployees</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GenerateEmployees</servlet-name>
+        <url-pattern>/generateemployees</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>javax.servlet.ServletException</exception-type>
+        <location>/errHandler.jsp</location>
+    </error-page>
+    
+    <listener>
+        <listener-class>com.hometask.webinterface.ListenerPerson</listener-class>
+    </listener>
+
+</web-app>

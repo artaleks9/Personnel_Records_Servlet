@@ -1,0 +1,21 @@
+.message_1 { color: green; text-align: center;}
+
+a {
+     text-decoration: none;
+     color: black;
+     font-size: 18px;
+     margin: 20px 15px 20px 15px;
+}
+#wrapper {
+     color:olivedrab;
+     margin: auto;
+     width: 1024px;
+     text-align: center;
+}
+#wrapperTable {
+     margin: 10px;
+     float: left;
+}
+#tableEmployees {
+     padding: 1px;
+}
